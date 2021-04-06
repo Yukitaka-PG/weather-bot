@@ -1,4 +1,5 @@
-  desc "This task is called by the Heroku scheduler add-on"
+namespace :scheduler do
+ desc "This task is called by the Heroku scheduler add-on"
   task :update_feed => :environment do
   require 'line/bot'  # gem 'line-bot-api'
   require 'open-uri'
@@ -56,3 +57,4 @@
     end
     "OK"
   end
+end
